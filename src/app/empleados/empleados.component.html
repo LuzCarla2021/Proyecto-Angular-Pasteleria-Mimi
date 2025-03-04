@@ -1,0 +1,40 @@
+<app-sidebar></app-sidebar>
+
+<div class="container text-center mt-5">
+
+    <!-- Contenedor para el botón de "Agregar" -->
+  <div class="d-flex justify-content-end mb-3">
+    <a routerLink="/add-employee" class="btn btn-primary btn-lg shadow-sm rounded-pill custom-btn">
+      <i class="fa fa-plus"></i> Agregar Empleado
+    </a>
+  </div>
+
+  <!-- Tabla de empleados con diseño moderno -->
+  <div class="table-responsive">
+    <table class="table table-striped table-hover shadow-lg">
+      <thead class="thead-dark">
+        <tr>
+          <th>Nombre Completo</th>
+          <th>Teléfono</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Correo Electrónico</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees; let i = index">
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.phone }}</td>
+          <td>{{ employee.birthdate | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ employee.email }}</td>
+          <td>
+            <!-- Botón de Eliminar con icono -->
+            <button class="btn btn-danger btn-sm" (click)="deleteEmployee(i)">
+              <i class="fa fa-trash"></i> Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

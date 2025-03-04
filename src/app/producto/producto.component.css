@@ -1,0 +1,81 @@
+/* Contenedor para el contenido principal */
+.container {
+    margin-left: 250px; /* De acuerdo con el ancho de tu sidebar */
+  }
+  
+  /* Estilos para la tabla de productos */
+  .table {
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  .table th, .table td {
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .table th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .table td {
+    border: 1px solid #ddd;
+  }
+  
+  .table img {
+    border-radius: 5px;
+  }
+  
+  /* Estilo para el botón de eliminar */
+  .btn-danger {
+    background-color: #e74c3c;
+    border-color: #c0392b;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c0392b;
+    border-color: #e74c3c;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Estilos para el botón "Agregar Producto" (mismo estilo que "Agregar Usuario") */
+  .custom-btn {
+    background-color: #007bff; /* Azul de fondo */
+    color: white; /* Texto blanco */
+    padding: 12px 25px; /* Espaciado dentro del botón */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    border-radius: 30px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave en hover */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-btn:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro en hover */
+    transform: translateY(-3px); /* Efecto de desplazamiento */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Sombra más fuerte */
+  }
+  
+  .custom-btn i {
+    margin-right: 10px; /* Espaciado entre el ícono y el texto */
+  }
+  
+  /* Estilo del botón cuando está inactivo */
+  .custom-btn:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsividad para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .container {
+      margin-left: 0;
+    }
+  }
+  

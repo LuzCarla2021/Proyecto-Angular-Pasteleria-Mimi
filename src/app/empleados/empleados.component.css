@@ -1,0 +1,74 @@
+/* Asegurarse de que el contenido no se superponga con el sidebar */
+.container {
+    margin-left: 250px; /* De acuerdo con el ancho de tu sidebar */
+  }
+  
+  /* Estilos para la tabla de empleados */
+  .table {
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  .table th, .table td {
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .table th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .table td {
+    border: 1px solid #ddd;
+  }
+  
+  .table img {
+    border-radius: 5px;
+  }
+  
+  /* Estilo para el botón de eliminar */
+  .btn-danger {
+    background-color: #e74c3c;
+    border-color: #c0392b;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c0392b;
+    border-color: #e74c3c;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Estilos para el botón "Agregar Empleado" */
+  .custom-btn {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Texto blanco */
+    padding: 12px 25px; /* Espaciado dentro del botón */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Fuente en negrita */
+    border-radius: 30px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave para hover */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-btn:hover {
+    background-color: #0056b3; /* Color más oscuro en hover */
+    transform: translateY(-3px); /* Efecto de desplazamiento al pasar el mouse */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Sombra pronunciada */
+  }
+  
+  .custom-btn i {
+    margin-right: 10px; /* Espaciado entre el ícono y el texto */
+  }
+  
+  /* Estilo del botón cuando está inactivo (enfoque) */
+  .custom-btn:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

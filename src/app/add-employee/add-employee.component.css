@@ -1,0 +1,105 @@
+/* Contenedor principal */
+.container-fluid {
+    margin-left: 250px; /* Para no superponerse con el sidebar */
+    padding-top: 20px;
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+  }
+  
+  /* Estilo para el cuadro que contiene el formulario */
+  .custom-card {
+    border: 2px solid #007bff; /* Borde visible y color similar al del botón */
+    border-radius: 15px;  /* Bordes más redondeados */
+    box-shadow: 0px 8px 15px rgba(0, 123, 255, 0.3); /* Sombra suave y de color */
+    background-color: #f8f9fa; /* Fondo suave para el cuadro */
+    width: 100%; /* Hace que ocupe todo el ancho disponible en pantallas pequeñas */
+    max-width: 1200px; /* Tamaño máximo del cuadro */
+    transition: all 0.3s ease-in-out; /* Transición suave para efectos */
+    padding: 10px;
+  }
+  
+  /* Efecto al pasar el mouse sobre el cuadro */
+  .custom-card:hover {
+    box-shadow: 0px 8px 20px rgba(0, 123, 255, 0.5); /* Sombra más pronunciada */
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño */
+  }
+  
+  /* Espaciado y diseño dentro del cuadro */
+  .card-body {
+    padding: 40px;
+    background-color: white; /* Fondo blanco para el formulario */
+    border-radius: 12px; /* Bordes internos redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más sutil dentro */
+  }
+  
+  /* Título */
+  h3 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center; /* Centrado del título */
+  }
+  
+  /* Estilo para los labels */
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 16px; /* Ajuste de tamaño */
+    color: #555; /* Color más suave para las etiquetas */
+  }
+  
+  /* Estilo para los campos de entrada */
+  .form-control {
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Borde sutil */
+    transition: border-color 0.3s ease; /* Transición para el borde */
+  }
+  
+  /* Efecto de enfoque para los campos de entrada */
+  .form-control:focus {
+    border-color: #007bff; /* Color de borde al hacer foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Resalta el campo al hacer foco */
+  }
+  
+  /* Estilo para el botón "Agregar Empleado" */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05); /* Efecto de aumento en el tamaño del botón */
+  }
+  
+  /* Responsividad para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .container-fluid {
+      margin-left: 0;
+      padding-left: 10px;
+    }
+  
+    .col-md-8 {
+      width: 100%; /* La columna ocupa todo el ancho en pantallas pequeñas */
+    }
+  
+    .custom-card {
+      padding: 15px;
+      max-width: 90%; /* Ajuste para pantallas pequeñas */
+    }
+  }
+  

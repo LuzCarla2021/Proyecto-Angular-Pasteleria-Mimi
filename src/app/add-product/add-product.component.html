@@ -1,0 +1,46 @@
+<app-sidebar></app-sidebar>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6"> <!-- Cambié el tamaño de la columna para que sea más pequeño -->
+      <!-- Cuadro alrededor del formulario -->
+      <div class="custom-card">
+        <div class="card-body">
+          <h3 class="text-center">Agregar Nuevo Producto</h3>
+
+          <form (ngSubmit)="addProduct()" #productForm="ngForm">
+            
+            <!-- Campo de URL de la Imagen -->
+            <div class="form-group">
+              <label for="productImageUrl">Imagen del Producto (URL)</label>
+              <input type="url" id="productImageUrl" class="form-control" [(ngModel)]="product.imageUrl" name="imageUrl" required>
+            </div>
+
+            <!-- Campo del Nombre del Producto -->
+            <div class="form-group">
+              <label for="productName">Nombre del Producto</label>
+              <input type="text" id="productName" class="form-control" [(ngModel)]="product.name" name="name" required>
+            </div>
+
+            <!-- Campo de Descripción -->
+            <div class="form-group">
+              <label for="productDescription">Descripción</label>
+              <textarea id="productDescription" class="form-control" [(ngModel)]="product.description" name="description" required></textarea>
+            </div>
+
+            <!-- Campo de Precio -->
+            <div class="form-group">
+              <label for="productPrice">Precio</label>
+              <input type="number" id="productPrice" class="form-control" [(ngModel)]="product.price" name="price" required>
+            </div>
+
+            <!-- Botón Agregar Producto -->
+            <button type="submit" class="btn btn-primary btn-lg shadow-sm rounded-pill mt-4" [disabled]="!productForm.form.valid">
+              <i class="fa fa-plus"></i> Agregar Producto
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

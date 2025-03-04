@@ -1,0 +1,109 @@
+/* Contenedor para el contenido principal */
+.container {
+    margin-left: 250px; /* De acuerdo con el ancho de tu sidebar */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que el contenido ocupe toda la altura de la pantalla */
+  }
+  
+  /* Cuadro alrededor del formulario */
+  .custom-card {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    border: 2px solid #007bff; /* Borde visible y color similar al del botón */
+    box-shadow: 0px 8px 15px rgba(0, 123, 255, 0.3); /* Sombra suave y de color */
+    padding: 2rem; /* Reducir el padding para un cuadro más compacto */
+    width: 100%; /* Hace que ocupe todo el ancho disponible en pantallas pequeñas */
+    max-width: 600px; /* Tamaño máximo del cuadro (más pequeño) */
+    margin: 0 auto; /* Asegura que el cuadro esté centrado horizontalmente */
+    transition: all 0.3s ease-in-out; /* Transición suave para efectos */
+  }
+  
+  /* Efecto al pasar el mouse sobre el cuadro */
+  .custom-card:hover {
+    box-shadow: 0px 8px 20px rgba(0, 123, 255, 0.5); /* Sombra más pronunciada */
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño */
+  }
+  
+  /* Título */
+  h3 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px; /* Espacio debajo del título */
+    text-align: center;
+  }
+  
+  /* Estilo para los labels */
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 10px; /* Aseguramos un pequeño espacio debajo de la etiqueta */
+    display: block; /* Esto ayuda a mantener el campo debajo de la etiqueta */
+  }
+  
+  /* Estilo para los campos de entrada */
+  .form-control {
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 12px;
+    margin-bottom: 20px; /* Espaciado entre los campos */
+    border: 1px solid #ccc; /* Borde sutil */
+    transition: border-color 0.3s ease; /* Transición para el borde */
+  }
+  
+  /* Efecto de enfoque para los campos de entrada */
+  .form-control:focus {
+    border-color: #007bff; /* Color de borde al hacer foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Resalta el campo al hacer foco */
+  }
+  
+  /* Estilo para la caja de texto */
+  textarea.form-control {
+    height: 150px;
+  }
+  
+  /* Estilo para el botón "Agregar Producto" */
+  .btn-primary {
+    background-color: #007bff; /* Color base del botón */
+    border-color: #007bff; /* Borde igual al color de fondo */
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Cambia el color de fondo en hover */
+    border-color: #004085; /* Cambia el borde en hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada en hover */
+    transform: scale(1.05); /* Efecto de aumento en el tamaño del botón */
+  }
+  
+  /* Botón deshabilitado */
+  .btn:disabled {
+    background-color: #c6c8ca;
+    border-color: #c6c8ca;
+    cursor: not-allowed;
+  }
+  
+  /* Responsividad: Para pantallas pequeñas, ajusta el tamaño del cuadro */
+  @media (max-width: 768px) {
+    .container {
+      margin-left: 0;
+      padding-left: 10px;
+    }
+  
+    .col-md-8 {
+      width: 100%; /* La columna ocupa todo el ancho en pantallas pequeñas */
+    }
+  
+    /* Ajustar el tamaño del cuadro en pantallas pequeñas */
+    .custom-card {
+      max-width: 90%; /* Reduce aún más el tamaño en pantallas pequeñas */
+    }
+  }
+  

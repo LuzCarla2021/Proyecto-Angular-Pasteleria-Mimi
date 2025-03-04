@@ -1,0 +1,69 @@
+/* Fondo gradiente para la página */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f849fb, #982082); /* Fondo con gradiente */
+  }
+  
+  /* Estilo para el cuadro de inicio de sesión */
+  .login-box {
+    background: #ffffff;
+    padding: 30px;
+    width: 360px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .login-box:hover {
+    transform: translateY(-10px); /* Efecto de elevación al pasar el ratón */
+  }
+  
+  /* Estilo para el encabezado */
+  h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para los inputs */
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    transition: border 0.3s ease;
+  }
+  
+  .input-group input:focus {
+    border: 1px solid #ff7e5f; /* Color de borde cuando está seleccionado */
+    outline: none;
+  }
+  
+  /* Estilo para el botón */
+  button {
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #1e68c9;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #feb47b; /* Efecto hover para el botón */
+  }
+  
+  button:active {
+    background-color: #e16a56; /* Efecto al presionar */
+  }
+  

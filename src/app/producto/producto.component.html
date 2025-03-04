@@ -1,0 +1,41 @@
+<app-sidebar></app-sidebar>
+
+<div class="container text-center mt-5">
+  <!-- Contenedor para el botón de "Agregar" -->
+  <div class="d-flex justify-content-end mb-3">
+    <button routerLink="/add-product" class="btn btn-primary btn-lg shadow-sm rounded-pill custom-btn" (click)="addProduct()">
+      <i class="fa fa-plus"></i> Agregar Producto
+    </button>
+  </div>
+  
+  <!-- Tabla de productos con diseño moderno -->
+  <div class="table-responsive">
+    <table class="table table-striped table-hover shadow-lg">
+      <thead class="thead-dark">
+        <tr>
+          <th>Imagen</th>
+          <th>Nombre del Producto</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; let i = index">
+          <td>
+            <img [src]="product.image" alt="Imagen del producto" width="100" height="100">
+          </td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>\${{ product.price }}</td> <!-- Mostrar el precio -->
+          <td>
+            <!-- Botón de Eliminar con icono -->
+            <button class="btn btn-danger btn-sm" (click)="deleteProduct(i)">
+              <i class="fa fa-trash"></i> Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

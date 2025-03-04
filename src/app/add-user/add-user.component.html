@@ -1,0 +1,56 @@
+<app-sidebar></app-sidebar>
+
+<div class="container-fluid mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <!-- Cuadro que envuelve el formulario -->
+      <div class="custom-card">
+        <h3 class="text-center mb-4">Agregar Nuevo Usuario</h3>
+        <!-- Formulario para agregar un nuevo usuario -->
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+          <div class="form-group">
+            <label for="name">Nombre Completo</label>
+            <input type="text" id="name" class="form-control" required [(ngModel)]="newUser.name" name="name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" class="form-control" required [(ngModel)]="newUser.email" name="email">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="text" id="phone" class="form-control" required [(ngModel)]="newUser.phone" name="phone">
+          </div>
+
+          <div class="form-group">
+            <label for="age">Edad</label>
+            <input type="number" id="age" class="form-control" required [(ngModel)]="newUser.age" name="age">
+          </div>
+
+          <div class="form-group">
+            <label for="role">Rol</label>
+            <select id="role" class="form-control" required [(ngModel)]="newUser.role" name="role">
+              <option value="Admin">Admin</option>
+              <option value="User">User</option>
+              <option value="Guest">Guest</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Género</label>
+            <select id="gender" class="form-control" required [(ngModel)]="newUser.gender" name="gender">
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <button type="submit" class="custom-btn mt-3" [disabled]="!userForm.form.valid">
+            Agregar Usuario
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+/* Estilos generales para el sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #f600e1;
+    color: #fff;
+    padding-top: 20px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para la lista de menú */
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-item {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #f8f9fa;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid #f400db;
+  }
+  
+  .menu-item:hover {
+    background-color: #ff00ff;
+    cursor: pointer;
+  }
+  
+  /* Estilo para cuando el link está activo */
+  .menu-item.router-link-active {
+    background-color: #007bff;
+  }
+  
+  /* Estilos para el botón de cerrar sesión */
+  .logout-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #e74c3c;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c0392b;
+  }
+  
